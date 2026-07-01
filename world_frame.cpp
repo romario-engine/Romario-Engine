@@ -1,7 +1,7 @@
 #include "world_frame.h"
-#include "hardware.h"
-#include "os_api.h"
-#include "gltf.h"
+#include "global/hardware.h"
+#include "global/os_api.h"
+#include "data/gltf.h"
 #include <thread>
 #pragma comment(lib, "d3d11.lib")
 #pragma comment(lib, "D3DCompiler.lib")

@@ -1,8 +1,8 @@
-#include "array.h"
+#include "data/array.h"
 #include "tests.h"
-#include "vector.h"
-#include "matrix.h"
-#include "os_api.h"
+#include "math/vector.h"
+#include "math/matrix.h"
+#include "global/os_api.h"
 #include <Windows.h>
 
 int __stdcall wWinMain(
@@ -21,9 +21,7 @@ int __stdcall wWinMain(
 	//test_set();
 	//test_file();
 	//test_fileset();
-	//test_web_server();
 	//test_json();
-	//test_database();
 
 	os_message_loop();
 

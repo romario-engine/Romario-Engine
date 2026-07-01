@@ -78,6 +78,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <ExecutablePath>$(SolutionDir);$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir);</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -141,73 +143,69 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="array.h" />
-    <ClInclude Include="button.h" />
-    <ClInclude Include="database.h" />
-    <ClInclude Include="file.h" />
-    <ClInclude Include="fileset.h" />
-    <ClInclude Include="flow_layout.h" />
-    <ClInclude Include="frame.h" />
-    <ClInclude Include="function.h" />
-    <ClInclude Include="geometry.h" />
-    <ClInclude Include="global_operators.h" />
-    <ClInclude Include="global_types.h" />
-    <ClInclude Include="gltf.h" />
-    <ClInclude Include="graphics.h" />
-    <ClInclude Include="grid_layout.h" />
-    <ClInclude Include="hardware.h" />
-    <ClInclude Include="heightmap.h" />
-    <ClInclude Include="image_view.h" />
-    <ClInclude Include="json.h" />
-    <ClInclude Include="matrix.h" />
-    <ClInclude Include="network.h" />
-    <ClInclude Include="observer.h" />
-    <ClInclude Include="option_list.h" />
-    <ClInclude Include="os_api.h" />
-    <ClInclude Include="real.h" />
-    <ClInclude Include="scroll_bar.h" />
-    <ClInclude Include="set.h" />
-    <ClInclude Include="string.h" />
+    <ClInclude Include="data\array.h" />
+    <ClInclude Include="data\file.h" />
+    <ClInclude Include="data\fileset.h" />
+    <ClInclude Include="data\gltf.h" />
+    <ClInclude Include="data\json.h" />
+    <ClInclude Include="data\set.h" />
+    <ClInclude Include="data\string.h" />
+    <ClInclude Include="global\function.h" />
+    <ClInclude Include="global\global_operators.h" />
+    <ClInclude Include="global\global_types.h" />
+    <ClInclude Include="global\hardware.h" />
+    <ClInclude Include="global\observer.h" />
+    <ClInclude Include="global\os_api.h" />
+    <ClInclude Include="global\time.h" />
+    <ClInclude Include="global\timer.h" />
+    <ClInclude Include="graphics\graphics.h" />
+    <ClInclude Include="graphics\heightmap.h" />
+    <ClInclude Include="graphics\world_object.h" />
+    <ClInclude Include="math\geometry.h" />
+    <ClInclude Include="math\matrix.h" />
+    <ClInclude Include="math\real.h" />
+    <ClInclude Include="math\vector.h" />
     <ClInclude Include="tests.h" />
-    <ClInclude Include="text_field.h" />
-    <ClInclude Include="text_layout.h" />
-    <ClInclude Include="time.h" />
-    <ClInclude Include="timer.h" />
-    <ClInclude Include="ui.h" />
-    <ClInclude Include="ui_types.h" />
-    <ClInclude Include="vector.h" />
-    <ClInclude Include="window.h" />
+    <ClInclude Include="ui\button.h" />
+    <ClInclude Include="ui\flow_layout.h" />
+    <ClInclude Include="ui\frame.h" />
+    <ClInclude Include="ui\grid_layout.h" />
+    <ClInclude Include="ui\image_view.h" />
+    <ClInclude Include="ui\option_list.h" />
+    <ClInclude Include="ui\scroll_bar.h" />
+    <ClInclude Include="ui\text_field.h" />
+    <ClInclude Include="ui\text_layout.h" />
+    <ClInclude Include="ui\ui.h" />
+    <ClInclude Include="ui\ui_types.h" />
+    <ClInclude Include="ui\window.h" />
     <ClInclude Include="world_frame.h" />
-    <ClInclude Include="world_object.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="button.cpp" />
-    <ClCompile Include="database.cpp" />
-    <ClCompile Include="file.cpp" />
-    <ClCompile Include="flow_layout.cpp" />
-    <ClCompile Include="frame.cpp" />
-    <ClCompile Include="geometry.cpp" />
-    <ClCompile Include="graphics.cpp" />
-    <ClCompile Include="grid_layout.cpp" />
-    <ClCompile Include="hardware.cpp" />
-    <ClCompile Include="heightmap.cpp" />
-    <ClCompile Include="image_view.cpp" />
+    <ClCompile Include="data\file.cpp" />
+    <ClCompile Include="global\hardware.cpp" />
+    <ClCompile Include="global\os_api.cpp" />
+    <ClCompile Include="global\time.cpp" />
+    <ClCompile Include="global\timer.cpp" />
+    <ClCompile Include="graphics\graphics.cpp" />
+    <ClCompile Include="graphics\heightmap.cpp" />
+    <ClCompile Include="graphics\world_object.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="network.cpp" />
-    <ClCompile Include="option_list.cpp" />
-    <ClCompile Include="os_api.cpp" />
-    <ClCompile Include="real.cpp" />
-    <ClCompile Include="scroll_bar.cpp" />
+    <ClCompile Include="math\geometry.cpp" />
+    <ClCompile Include="math\real.cpp" />
     <ClCompile Include="tests.cpp" />
-    <ClCompile Include="text_field.cpp" />
-    <ClCompile Include="text_layout.cpp" />
-    <ClCompile Include="time.cpp" />
-    <ClCompile Include="timer.cpp" />
-    <ClCompile Include="ui.cpp" />
-    <ClCompile Include="ui_types.cpp" />
-    <ClCompile Include="window.cpp" />
+    <ClCompile Include="ui\button.cpp" />
+    <ClCompile Include="ui\flow_layout.cpp" />
+    <ClCompile Include="ui\frame.cpp" />
+    <ClCompile Include="ui\grid_layout.cpp" />
+    <ClCompile Include="ui\image_view.cpp" />
+    <ClCompile Include="ui\option_list.cpp" />
+    <ClCompile Include="ui\scroll_bar.cpp" />
+    <ClCompile Include="ui\text_field.cpp" />
+    <ClCompile Include="ui\text_layout.cpp" />
+    <ClCompile Include="ui\ui.cpp" />
+    <ClCompile Include="ui\ui_types.cpp" />
+    <ClCompile Include="ui\window.cpp" />
     <ClCompile Include="world_frame.cpp" />
-    <ClCompile Include="world_object.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Natvis Include="dbg_view.natvis" />

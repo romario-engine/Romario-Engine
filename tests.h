@@ -8,6 +8,4 @@ void test_ui();
 void test_set();
 void test_file();
 void test_fileset();
-void test_web_server();
 void test_json();
-void test_database();

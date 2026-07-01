@@ -1,14 +1,13 @@
 #include "tests.h"
-#include "string.h"
-#include "vector.h"
-#include "matrix.h"
-#include "array.h"
-#include "set.h"
-#include "file.h"
-#include "fileset.h"
-#include "network.h"
-#include "geometry.h"
-#include "os_api.h"
+#include "data/string.h"
+#include "math/vector.h"
+#include "math/matrix.h"
+#include "data/array.h"
+#include "data/set.h"
+#include "data/file.h"
+#include "data/fileset.h"
+#include "math/geometry.h"
+#include "global/os_api.h"
 
 void test_array()
 {
@@ -179,13 +178,13 @@ void test_real()
 	l = root(100000000.0r, 8); // l = 10
 }
 
-#include "window.h"
-#include "text_field.h"
-#include "flow_layout.h"
-#include "button.h"
-#include "grid_layout.h"
+#include "ui/window.h"
+#include "ui/text_field.h"
+#include "ui/flow_layout.h"
+#include "ui/button.h"
+#include "ui/grid_layout.h"
 #include "world_frame.h"
-#include "image_view.h"
+#include "ui/image_view.h"
 
 void test_ui()
 {
@@ -314,63 +313,7 @@ void test_fileset()
 	s.close();
 }
 
-array<byte> request_output;
-void test_web_server()
-{
-	/*network_server *ws = new network_server();
-	ws->ip = ip_address(127, 0, 0, 1);
-	ws->port = 8000;
-	auto process_request = [](byte *input, uint64 input_size, byte **output, uint64 *output_size) -> bool
-	{
-		http_request request;
-		if(!request.setup(string_line<char8>((char8 *)(input), input_size))) return false;
-		http_response response;
-		response.version << U"HTTP/1.1";
-		if(compare_string_lines<char32>(string_line<char32>(request.query), string_line<char32>(U"/")) == compare_result::equal)
-		{
-			response.status_code << U"200";
-			response.status_message << U"OK";
-			response.content_type << U"text/html";
-			file f;
-			f.read_access = true;
-			f.write_access = true;
-			f.filename << U"C:\\Users\\rshkurdalov\\source\\repos\\WebApp\\index.html";
-			f.open();
-			response.data.insert_default(0, f.size);
-			f.position = 0;
-			f.read(f.size, response.data.addr);
-			
-		}
-		else if(compare_string_lines<char32>(string_line<char32>(request.query), string_line<char32>(U"/style.css")) == compare_result::equal)
-		{
-			response.status_code << U"200";
-			response.status_message << U"OK";
-			response.content_type << U"text/css";
-			file f;
-			f.read_access = true;
-			f.write_access = true;
-			f.filename << U"C:\\Users\\rshkurdalov\\source\\repos\\WebApp\\style.css";
-			f.open();
-			response.data.insert_default(0, f.size);
-			f.position = 0;
-			f.read(f.size, response.data.addr);
-		}
-		else
-		{
-			response.status_code << U"404";
-			response.status_message << U"Not Found";
-		}
-		request_output.clear();
-		response.compose(&request_output);
-		*output = request_output.addr;
-		*output_size = request_output.size;
-		return true;
-	};
-	ws->process_request = process_request;
-	ws->run();*/
-}
-
-#include "json.h"
+#include "data/json.h"
 
 void test_json()
 {
@@ -387,146 +330,4 @@ void test_json()
 
 	u8string json_str;
 	j.stringify(&json_str);
-}
-
-#include "database.h"
-void dump_db(database &db, u16string *str)
-{
-	for(uint64 i = 0; i < db.tables.size; i++)
-	{
-		*str << db.tables[i].name << u'\n';
-		for(uint64 j = 0; j < db.tables[i].fields.size; j++)
-			*str << db.tables[i].fields[j].name << u' ';
-		*str << u'\n';
-		db.query_rows(i, [&db, str, i] (void *row_data) -> row_action
-			{
-				array<data_field> columns;
-				db.split_row(i, row_data, &columns);
-				for(uint64 k = 0; k < columns.size; k++)
-				{
-					if(db.tables[i].fields[k].type == data_field_type::int8
-						|| db.tables[i].fields[k].type == data_field_type::int16
-						|| db.tables[i].fields[k].type == data_field_type::int32
-						|| db.tables[i].fields[k].type == data_field_type::int64)
-						*str << columns[k].i64value << u' ';
-					else if(db.tables[i].fields[k].type == data_field_type::uint8
-						|| db.tables[i].fields[k].type == data_field_type::uint16
-						|| db.tables[i].fields[k].type == data_field_type::uint32
-						|| db.tables[i].fields[k].type == data_field_type::uint64)
-						*str << columns[k].ui64value << u' ';
-					else if(db.tables[i].fields[k].type == data_field_type::float32
-						|| db.tables[i].fields[k].type == data_field_type::float64)
-						*str << columns[k].f64value << u' ';
-					else if(db.tables[i].fields[k].type == data_field_type::u8string)
-						*str << columns[k].u8str;
-					else if(db.tables[i].fields[k].type == data_field_type::u16string)
-						*str << columns[k].u16str;
-					else if(db.tables[i].fields[k].type == data_field_type::u32string)
-						*str << columns[k].u32str;
-				}
-				*str << u'\n';
-				return row_action::no_change;
-			});
-	}
-}
-void test_database()
-{
-	u16string name;
-	data_field_desc desc;
-	data_field field;
-	desc.count = 0;
-	database db;
-	db.path << u"A:\\Документы\\Kromash Engine\\db";
-	db.name << u"objects";
-	db_result dbr;
-	db.load(&dbr);
-
-	/*db.create(&dbr);
-	name <<= u"users";
-	db.create_table(name, &dbr);
-	desc.name << u"id";
-	desc.type = data_field_type::uint32;
-	desc.indexed = true;
-	field.i64value = int64(0);
-	db.add_column(0, 0, desc, field, &dbr);
-	desc.name <<= u"name";
-	desc.type = data_field_type::u16string;
-	desc.count = 50;
-	desc.indexed = false;
-	db.add_column(0, 1, desc, field, &dbr);*/
-
-#pragma pack(push, 1)
-	struct record
-	{
-		uint32 id;
-		uint32 age;
-		uint64 name_strlen;
-		char16 name[50];
-	};
-	record r;
-	/*r.id = 1;
-	r.name_strlen = array_size(u"Tom");
-	copy_memory(u"Tom", r.name, r.name_strlen * 2);
-	db.insert_row(0, &r);
-
-	r.id = 4;
-	r.name_strlen = array_size(u"Scott");
-	copy_memory(u"Scott", r.name, r.name_strlen * 2);
-	db.insert_row(0, &r);
-
-	r.id = 2;
-	r.name_strlen = array_size(u"Paul");
-	copy_memory(u"Paul", r.name, r.name_strlen * 2);
-	db.insert_row(0, &r);
-
-	r.id = 4;
-	r.name_strlen = array_size(u"Scott");
-	copy_memory(u"Scott", r.name, r.name_strlen * 2);
-	db.insert_row(0, &r);
-
-	r.id = 2;
-	r.name_strlen = array_size(u"Paul");
-	copy_memory(u"Paul", r.name, r.name_strlen * 2);
-	db.insert_row(0, &r);
-
-	r.id = 4;
-	r.name_strlen = array_size(u"Scott");
-	copy_memory(u"Scott", r.name, r.name_strlen * 2);
-	db.insert_row(0, &r);
-
-	r.id = 2;
-	r.name_strlen = array_size(u"Paul");
-	copy_memory(u"Paul", r.name, r.name_strlen * 2);
-	db.insert_row(0, &r);*/
-
-	/*field.ui64value = 2;
-	db.remove_rows(0, 0, field, nullptr, nullptr);*/
-
-	//db.remove_column(0, 1, &dbr);
-
-	/*db.query_rows(0, [] (void *row_data) -> row_action
-		{
-			record *r = (record *)(row_data);
-			if(string_view<char16>(r->name, r->name_strlen) == string_view<char16>(u"Tom\0"))
-			{
-				r->age = 16;
-				return row_action::update;
-			}
-			return row_action::no_change;
-		});*/
-
-	field.u16str <<= u"Paul";
-	field.u16str << u'\0';
-	db.query_matched_rows(0, 2, field, [] (void *row_data) -> row_action
-		{
-			record *r = (record *)(row_data);
-			r->age = 18;
-			return row_action::update;
-		});
-
-	u16string dump;
-	dump_db(db, &dump);
-	for(uint64 i = 0; i < dump.size; i++)
-		if(dump[i] == u'\0') dump.remove(i--);
-#pragma pack(pop)
 }

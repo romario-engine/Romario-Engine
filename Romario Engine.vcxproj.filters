@@ -5,204 +5,207 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="Исходные файлы\graphics">
+      <UniqueIdentifier>{c060f28d-44be-479d-938d-272d1acc80f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\global">
+      <UniqueIdentifier>{e79278d9-b208-41a7-a67d-e681fe3cfcc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\data">
+      <UniqueIdentifier>{11628f2b-4498-4227-b9c7-34c849ddd626}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\math">
+      <UniqueIdentifier>{2f648c6e-e70e-4663-91af-45543e8054cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\ui">
+      <UniqueIdentifier>{e002a042-60cd-4cfa-8394-fbd0050a1ae5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="array.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="button.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="database.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="file.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="fileset.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="flow_layout.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="frame.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="function.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="geometry.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="global_operators.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="global_types.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="gltf.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="graphics.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="grid_layout.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="hardware.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="heightmap.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="image_view.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="json.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="matrix.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="network.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="observer.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="option_list.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="os_api.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="real.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="scroll_bar.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="set.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="string.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
     <ClInclude Include="tests.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="text_field.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="text_layout.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="time.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="timer.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="ui.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="ui_types.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="vector.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="window.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
     <ClInclude Include="world_frame.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="world_object.h">
-      <Filter>Исходные файлы</Filter>
+    <ClInclude Include="graphics\graphics.h">
+      <Filter>Исходные файлы\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\heightmap.h">
+      <Filter>Исходные файлы\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\world_object.h">
+      <Filter>Исходные файлы\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="global\function.h">
+      <Filter>Исходные файлы\global</Filter>
+    </ClInclude>
+    <ClInclude Include="global\global_operators.h">
+      <Filter>Исходные файлы\global</Filter>
+    </ClInclude>
+    <ClInclude Include="global\global_types.h">
+      <Filter>Исходные файлы\global</Filter>
+    </ClInclude>
+    <ClInclude Include="global\hardware.h">
+      <Filter>Исходные файлы\global</Filter>
+    </ClInclude>
+    <ClInclude Include="global\os_api.h">
+      <Filter>Исходные файлы\global</Filter>
+    </ClInclude>
+    <ClInclude Include="global\time.h">
+      <Filter>Исходные файлы\global</Filter>
+    </ClInclude>
+    <ClInclude Include="global\timer.h">
+      <Filter>Исходные файлы\global</Filter>
+    </ClInclude>
+    <ClInclude Include="data\array.h">
+      <Filter>Исходные файлы\data</Filter>
+    </ClInclude>
+    <ClInclude Include="data\file.h">
+      <Filter>Исходные файлы\data</Filter>
+    </ClInclude>
+    <ClInclude Include="data\fileset.h">
+      <Filter>Исходные файлы\data</Filter>
+    </ClInclude>
+    <ClInclude Include="data\gltf.h">
+      <Filter>Исходные файлы\data</Filter>
+    </ClInclude>
+    <ClInclude Include="data\json.h">
+      <Filter>Исходные файлы\data</Filter>
+    </ClInclude>
+    <ClInclude Include="data\set.h">
+      <Filter>Исходные файлы\data</Filter>
+    </ClInclude>
+    <ClInclude Include="data\string.h">
+      <Filter>Исходные файлы\data</Filter>
+    </ClInclude>
+    <ClInclude Include="math\geometry.h">
+      <Filter>Исходные файлы\math</Filter>
+    </ClInclude>
+    <ClInclude Include="math\matrix.h">
+      <Filter>Исходные файлы\math</Filter>
+    </ClInclude>
+    <ClInclude Include="math\real.h">
+      <Filter>Исходные файлы\math</Filter>
+    </ClInclude>
+    <ClInclude Include="math\vector.h">
+      <Filter>Исходные файлы\math</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\button.h">
+      <Filter>Исходные файлы\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\flow_layout.h">
+      <Filter>Исходные файлы\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\frame.h">
+      <Filter>Исходные файлы\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\grid_layout.h">
+      <Filter>Исходные файлы\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\image_view.h">
+      <Filter>Исходные файлы\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\option_list.h">
+      <Filter>Исходные файлы\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\scroll_bar.h">
+      <Filter>Исходные файлы\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\text_field.h">
+      <Filter>Исходные файлы\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\text_layout.h">
+      <Filter>Исходные файлы\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\ui.h">
+      <Filter>Исходные файлы\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\ui_types.h">
+      <Filter>Исходные файлы\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\window.h">
+      <Filter>Исходные файлы\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="global\observer.h">
+      <Filter>Исходные файлы\global</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="button.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="database.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="file.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="flow_layout.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="frame.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="geometry.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="graphics.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="grid_layout.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="hardware.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="heightmap.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="image_view.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="network.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="option_list.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="os_api.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="real.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="scroll_bar.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="tests.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="text_field.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="text_layout.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="time.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="timer.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="ui.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="ui_types.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="window.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="world_frame.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="world_object.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="graphics\graphics.cpp">
+      <Filter>Исходные файлы\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\heightmap.cpp">
+      <Filter>Исходные файлы\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\world_object.cpp">
+      <Filter>Исходные файлы\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="global\hardware.cpp">
+      <Filter>Исходные файлы\global</Filter>
+    </ClCompile>
+    <ClCompile Include="global\os_api.cpp">
+      <Filter>Исходные файлы\global</Filter>
+    </ClCompile>
+    <ClCompile Include="global\time.cpp">
+      <Filter>Исходные файлы\global</Filter>
+    </ClCompile>
+    <ClCompile Include="global\timer.cpp">
+      <Filter>Исходные файлы\global</Filter>
+    </ClCompile>
+    <ClCompile Include="data\file.cpp">
+      <Filter>Исходные файлы\data</Filter>
+    </ClCompile>
+    <ClCompile Include="math\geometry.cpp">
+      <Filter>Исходные файлы\math</Filter>
+    </ClCompile>
+    <ClCompile Include="math\real.cpp">
+      <Filter>Исходные файлы\math</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\button.cpp">
+      <Filter>Исходные файлы\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\flow_layout.cpp">
+      <Filter>Исходные файлы\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\frame.cpp">
+      <Filter>Исходные файлы\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\grid_layout.cpp">
+      <Filter>Исходные файлы\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\image_view.cpp">
+      <Filter>Исходные файлы\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\option_list.cpp">
+      <Filter>Исходные файлы\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\scroll_bar.cpp">
+      <Filter>Исходные файлы\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\text_field.cpp">
+      <Filter>Исходные файлы\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\text_layout.cpp">
+      <Filter>Исходные файлы\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\ui.cpp">
+      <Filter>Исходные файлы\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\ui_types.cpp">
+      <Filter>Исходные файлы\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\window.cpp">
+      <Filter>Исходные файлы\ui</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
